@@ -73,4 +73,10 @@ class Article < ActiveRecord::Base
       yield if block_given?
     end
   end
+
+  # BLACKLIST_ATTRIBUTES = [:created_at, :updated_at, :author_id, :body]
+
+  # [:to_json, :to_xml].each do |name|
+  #   define_method(name){ super(except: BLACKLIST_ATTRIBUTES) }
+  # end
 end

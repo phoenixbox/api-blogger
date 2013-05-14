@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
+  respond_to :html, :json
+
   def show
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:id]).decorate(context: {role: :admin})
   end
 
   def index
@@ -13,12 +15,9 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params[:article])
-    if @article.save
-      flash[:notice] = "Article was created."
-      redirect_to articles_path
-    else
-      render :new
-    end
+    flash[:notice] = @article.save ? "Your article was created." : "Article failed to save."
+    # respond_with @article, location: articles_path
+    render formats: [:html, :json]
   end
 
   def edit

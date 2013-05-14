@@ -50,6 +50,10 @@ GEM
     coffee-script-source (1.6.2)
     database_cleaner (0.9.1)
     diff-lcs (1.2.2)
+    draper (1.2.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -69,6 +73,9 @@ GEM
       rspec (~> 2.11)
     hike (1.2.1)
     i18n (0.6.1)
+    jbuilder (1.4.0)
+      activesupport (>= 3.0.0)
+      multi_json (>= 1.2.0)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -116,6 +123,9 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    request_store (1.0.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -169,13 +179,18 @@ DEPENDENCIES
   capybara
   coffee-rails
   database_cleaner
+  draper
   fabrication (~> 2.2.2)
   faker
   guard
   guard-rspec
+  jbuilder
   jquery-rails
   launchy
+  multi_json
+  pry
   rails (~> 3.2.13)
+  rest-client
   rspec-rails
   sass-rails
   sqlite3

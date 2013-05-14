@@ -3,6 +3,11 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.2.13'
 gem 'sqlite3'
 gem 'jquery-rails'
+gem 'draper'
+gem 'jbuilder'
+gem 'multi_json'
+gem 'rest-client'
+gem 'pry'
 
 group :assets do
   gem 'sass-rails'
