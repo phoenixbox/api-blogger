@@ -1,4 +1,4 @@
-json.id @article, :id
+json.banana @article, :id
 json.title @article, :title
 json.body @article, :body
 json.show_url article_url(@article)
